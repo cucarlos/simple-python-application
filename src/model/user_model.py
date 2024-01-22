@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from util.logger import Logger
+
 
 @dataclass
 class UserEntity():    
@@ -9,6 +11,6 @@ class UserEntity():
 
 class UserModel():
     def save_user(self, userEntity: UserEntity) -> UserEntity:
-        print("saving user")
-        print("user saved")
+        Logger.info("saving user")
+        Logger.info("user saved")
         return userEntity
